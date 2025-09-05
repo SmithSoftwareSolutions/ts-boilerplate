@@ -1,0 +1,37 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2021", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@org/angular/core": ["src/libs/angular/core/src/index.ts"],
+      "@org/angular/main": ["src/libs/angular/main/src/index.ts"],
+      "@org/core-plugin": ["src/tools/core-plugin/src/index.ts"],
+      "@org/nest/auth": ["src/libs/nest/auth/src/index.ts"],
+      "@org/nest/common": ["src/libs/nest/common/src/index.ts"],
+      "@org/nest/communication": ["src/libs/nest/communication/src/index.ts"],
+      "@org/nest/function": ["src/libs/nest/function/src/index.ts"],
+      "@org/nest/resource": ["src/libs/nest/resource/src/index.ts"],
+      "@org/nest/resource/objects": [
+        "src/libs/nest/resource/src/index.objects.ts"
+      ],
+      "@org/nest/storage": ["src/libs/nest/storage/src/index.ts"],
+      "@org/nest/storage/objects": [
+        "src/libs/nest/storage/src/index.objects.ts"
+      ],
+      "@org/ts/common": ["src/libs/ts/common/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

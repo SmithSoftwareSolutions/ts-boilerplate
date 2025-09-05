@@ -1,0 +1,267 @@
+<div class="page-section">
+  <div class="mw-desktop w-full row wrap g-4 main-axis-even">
+    <!-- buttons -->
+    <div class="container">
+      <h2>Buttons</h2>
+      <div class="column g-2">
+        <div class="row g-2">
+          <button class="primary-bg" (click)="doSomething()">
+            <div class="tooltip">Primary</div>
+            Create <org-icon> add </org-icon>
+          </button>
+          <button (click)="doSomething()">
+            Create <org-icon> add </org-icon>
+          </button>
+
+          <button disabled class="primary-bg" (click)="doSomething()">
+            Create <org-icon> add </org-icon>
+          </button>
+        </div>
+        <div class="row g-2">
+          <button class="outline-btn primary-fg" (click)="doSomething()">
+            Create <org-icon> add </org-icon>
+          </button>
+          <button class="outline-btn" (click)="doSomething()">
+            Create <org-icon> add </org-icon>
+          </button>
+
+          <button
+            disabled
+            class="outline-btn primary-fg"
+            (click)="doSomething()">
+            Create <org-icon> add </org-icon>
+          </button>
+        </div>
+        <div class="row g-2">
+          <button class="primary-bg icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+          <button class="icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+
+          <button disabled class="icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+
+          <button class="primary-bg mini-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+          <button class="mini-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+
+          <button disabled class="mini-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+        </div>
+        <div class="row g-2">
+          <button class="primary-bg round-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+          <button class="round-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+
+          <button disabled class="round-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+
+          <button
+            class="primary-bg mini-round-icon-btn"
+            (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+          <button outlined class="mini-round-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+
+          <button disabled class="mini-round-icon-btn" (click)="doSomething()">
+            <org-icon> add </org-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- cards -->
+    <div class="container">
+      <h2>Cards</h2>
+
+      <div class="column g-2">
+        <div class="card">
+          <h3>Light Shadow</h3>
+        </div>
+        <div class="card m-shadow">
+          <h3>Medium Shadow</h3>
+        </div>
+        <div class="card h-shadow">
+          <h3>Heavy Shadow</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- form fields -->
+    <div class="container">
+      <h2>Form Fields</h2>
+      <div class="column g-2">
+        <div class="row g-2">
+          <form>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input name="email" type="text" placeholder="ex: me@email.com" />
+
+              <org-icon> visibility </org-icon>
+            </div>
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input name="password" type="password" />
+
+              <org-icon class="as-button" (click)="doSomething()" role="button">
+                visibility
+              </org-icon>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- tables -->
+    <div class="container">
+      <h2>Tables</h2>
+      <div class="column g-2">
+        <div class="table-wrapper">
+          <table>
+            <tr>
+              <th></th>
+              <th>ID</th>
+              <th>Status</th>
+              <th>Email</th>
+              <th>Account</th>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-124</td>
+              <td>Succeeded</td>
+              <td>johndoe&#64;email.com</td>
+              <td>$ 316.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-126</td>
+              <td>Pending</td>
+              <td>johnny&#64;apple.com</td>
+              <td>$ 316.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-225</td>
+              <td>Pending</td>
+              <td>janedo&#64;email.com</td>
+              <td>$ 316.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-714</td>
+              <td>Failed</td>
+              <td>horace&#64;email.com</td>
+              <td>$ 57.43</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="filters">
+          <div class="form-field">
+            <label for="search">Search</label>
+            <input name="search" type="text" placeholder="ex: me@email.com" />
+          </div>
+
+          <div class="form-field">
+            <label for="status">Status</label>
+
+            <select name="status">
+              <option value="succeeded">Succeeded</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
+            </select>
+
+            <org-icon>expand_more</org-icon>
+          </div>
+
+          <div class="form-field">
+            <label for="amount">Amount</label>
+
+            <org-icon> attach_money </org-icon>
+            <input name="amount" />
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <tr>
+              <th></th>
+              <th>ID</th>
+              <th>Status</th>
+              <th>Email</th>
+              <th>Account</th>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-124</td>
+              <td>Succeeded</td>
+              <td>johndoe&#64;email.com</td>
+              <td>$ 316.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-126</td>
+              <td>Pending</td>
+              <td>johnny&#64;apple.com</td>
+              <td>$ 316.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-225</td>
+              <td>Pending</td>
+              <td>janedo&#64;email.com</td>
+              <td>$ 316.00</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>G-714</td>
+              <td>Failed</td>
+              <td>horace&#64;email.com</td>
+              <td>$ 57.43</td>
+            </tr>
+          </table>
+
+          <div class="pagination">
+            <p class="count">1 - 5 / 20</p>
+
+            <div class="form-field horizontal">
+              <label for="pageSize">Page Size:</label>
+              <select name="pageSize">
+                <option [value]="5">5</option>
+                <option [value]="10">10</option>
+                <option [value]="25">25</option>
+                <option [value]="50">50</option>
+                <option [value]="100">100</option>
+              </select>
+
+              <org-icon (click)="logEvent($event)">expand_more</org-icon>
+            </div>
+
+            <div class="actions">
+              <button class="primary-bg mini-icon-btn" (click)="doSomething()">
+                <org-icon> chevron_left </org-icon>
+              </button>
+              <button class="primary-bg mini-icon-btn" (click)="doSomething()">
+                <org-icon> chevron_right </org-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

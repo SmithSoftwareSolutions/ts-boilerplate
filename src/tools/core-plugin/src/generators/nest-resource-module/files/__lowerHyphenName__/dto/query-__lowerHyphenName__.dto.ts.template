@@ -1,0 +1,8 @@
+import { <%= name%>ResourceTypeMappings } from '../<%= lowerHyphenName%>.resource-type-mappings';
+import { FindManyDTO } from '@org/nest/common';
+
+export class Query<%= name%>DTO extends FindManyDTO<
+  <%= name%>ResourceTypeMappings['whereT'],
+  <%= name%>ResourceTypeMappings['includeT'],
+  <%= name%>ResourceTypeMappings['orderByT']
+> {}

@@ -1,0 +1,4 @@
+import { PartialType } from '@nestjs/swagger';
+import { Create<%= name%>DTO } from './create-<%= lowerHyphenName%>.dto';
+
+export class Update<%= name%>DTO extends PartialType(Create<%= name%>DTO){}

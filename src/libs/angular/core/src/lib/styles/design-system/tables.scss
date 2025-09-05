@@ -1,0 +1,54 @@
+// @import 'colors.scss';
+
+$table-border-radius: 0.4rem;
+
+.table-wrapper {
+  border: 0.1rem solid $faded-gray-color;
+  border-radius: 0.4rem;
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 1rem;
+
+    font-size: 1.2rem;
+    label {
+      font-size: 1.2rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  //   border-top: 0.1rem solid $faded-gray-color;
+  border-bottom: 0.1rem solid $faded-gray-color;
+  border-collapse: collapse;
+
+  &:last-of-type {
+    border: none;
+  }
+}
+
+th {
+  color: $faded-slate-color;
+  font-weight: 500;
+}
+
+td,
+th {
+  padding: 1rem;
+  min-width: fit-content;
+  text-align: start;
+}

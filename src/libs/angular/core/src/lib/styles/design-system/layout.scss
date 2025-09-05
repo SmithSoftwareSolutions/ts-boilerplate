@@ -1,0 +1,115 @@
+// @import 'colors.scss';
+
+// page setup
+org-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-section {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 144rem; // ~1440px
+  }
+}
+
+.legal-section {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  ol {
+    width: 100%;
+  }
+}
+
+#footer {
+  margin-top: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-axis-centered {
+  justify-content: center;
+}
+.cross-axis-centered {
+  align-items: center;
+}
+.both-axis-centered {
+  justify-content: center;
+  align-items: center;
+}
+.main-axis-even {
+  justify-content: space-evenly;
+}
+.main-axis-spread {
+  justify-content: space-between;
+}
+
+.auto-scroll {
+  overflow-y: auto;
+}
+
+.tooltip-parent {
+  position: relative;
+}
+
+* {
+  &:hover {
+    > .tooltip {
+      display: flex;
+    }
+  }
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: -3.4rem;
+  left: auto;
+  z-index: 999;
+
+  padding: 0.5rem 1rem;
+
+  font-size: 1.4rem;
+
+  background-color: $dark-background-color;
+  color: $text-on-dark-background-color;
+  border-radius: 0.4rem;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    top: -1rem; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -0.5rem;
+    border-width: 0.5rem;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+}
+
+// ~ 920px
+@media (max-width: 92rem) {
+  .page-section {
+    padding: 5rem 2rem;
+  }
+}

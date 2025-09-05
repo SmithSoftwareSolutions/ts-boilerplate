@@ -1,0 +1,15 @@
+import { BaseResourceService } from '@org/nest/common';
+import { <%= name%>, Prisma } from '@prisma/client';
+import { <%= name%>ResourceTypeMappings, <%= lowerName%>CompositeKeyOrder } from './<%= lowerHyphenName%>.resource-type-mappings';
+import { Injectable } from '@nestjs/common';
+
+@Injectable()
+export class <%= name%>Service extends BaseResourceService<<%= name%>ResourceTypeMappings> {
+  override get prisma() {
+    return this.unscopedPrisma.<%= lowerName%>;
+  }
+
+  constructor() {
+    super('<%= lowerName%>', <%= lowerName%>CompositeKeyOrder);
+  }
+}

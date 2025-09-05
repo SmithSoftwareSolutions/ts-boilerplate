@@ -1,0 +1,102 @@
+$primary-color: #003a7d;
+$text-on-primary-color: #ffffff;
+$secondary-color: #0076ff;
+$text-on-secondary-color: #ffffff;
+$light-background-color: #ffffff;
+$light-accent-background-color: #fafafa;
+$text-on-light-background-color: #000000;
+$dark-background-color: #000000;
+$text-on-dark-background-color: #ffffff;
+$dark-accent-background-color: #292929;
+
+$disabled-color: #cecece;
+$text-on-disabled-color: #666666;
+
+// misc palette
+$faded-gray-color: #d9d9d9;
+$faded-slate-color: #656565;
+
+.light-bg {
+  background-color: $light-background-color;
+  color: $text-on-light-background-color;
+}
+
+.light-accent-bg {
+  background-color: $light-accent-background-color;
+  color: $text-on-light-background-color;
+}
+
+.dark-bg {
+  background-color: $dark-background-color;
+  color: $text-on-dark-background-color;
+}
+
+.dark-accent-bg {
+  background-color: $dark-accent-background-color;
+  color: $text-on-dark-background-color;
+}
+
+.primary-bg {
+  background-color: $primary-color;
+  color: $text-on-primary-color;
+}
+
+.secondary-bg {
+  background-color: $secondary-color;
+  color: $text-on-secondary-color;
+}
+
+.light-fg {
+  color: $light-background-color;
+}
+
+.light-accent-fg {
+  color: $light-accent-background-color;
+}
+
+.dark-fg {
+  color: $dark-background-color;
+}
+
+.dark-accent-fg {
+  color: $dark-accent-background-color;
+}
+
+.primary-fg {
+  color: $primary-color;
+}
+
+.secondary-fg {
+  color: $secondary-color;
+}
+
+// .light-border {
+//   border: 0.1rem solid $light-background-color;
+// }
+
+// .light-accent-border {
+//   border: 0.1rem solid $light-accent-background-color;
+// }
+
+// .dark-border {
+//   border: 0.1rem solid $dark-background-color;
+// }
+
+// .dark-accent-border {
+//   border: 0.1rem solid $dark-accent-background-color;
+// }
+
+// .primary-border {
+//   border: 0.2rem solid $primary-color;
+// }
+
+// .secondary-border {
+//   border: 0.1rem solid $secondary-color;
+// }
+
+// .primary-text {
+//   color: $primary-color;
+// }
+// .secondary-text {
+//   color: $primary-color;
+// }

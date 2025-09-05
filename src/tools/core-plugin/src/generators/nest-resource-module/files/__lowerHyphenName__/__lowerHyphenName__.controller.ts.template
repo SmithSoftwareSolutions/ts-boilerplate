@@ -1,0 +1,52 @@
+
+import { <%= name%>Service } from './<%= lowerHyphenName%>.service';
+import { Controller } from '@nestjs/common';
+import { Create<%= name%>DTO } from './dto/create-<%= lowerHyphenName%>.dto';
+import { Query<%= name%>DTO } from './dto/query-<%= lowerHyphenName%>.dto';
+import { routePrefix } from '../config';
+import { Update<%= name%>DTO } from './dto/update-<%= lowerHyphenName%>.dto';
+import { USER_ROLE } from '@org/nest/auth';
+import { RoleBasedAllowedIncludes, RoleBasedAllowedWhere, RoleBasedAllowedOrderBy, FindOneDTO, AuthorizedRoles, createBaseController } from '@org/nest/common';
+import { <%= name%>ResourceTypeMappings, <%= lowerName%>CompositeKeyOrder } from './<%= lowerHyphenName%>.resource-type-mappings';
+
+const allowedIncludes: RoleBasedAllowedIncludes<
+  <%= name%>ResourceTypeMappings['includeT']
+> = {};
+
+const allowedWhere: RoleBasedAllowedWhere<<%= name%>ResourceTypeMappings['whereT']> = {};
+
+const allowedOrderBy: RoleBasedAllowedOrderBy<<%= name%>ResourceTypeMappings['orderByT']> =
+  {};
+
+const queryOneTransformer = (
+  q: FindOneDTO<<%= name%>ResourceTypeMappings['includeT']>
+) => q;
+const queryManyTransformer = (q: Query<%= name%>DTO) => q;
+
+const authorizedRoles: AuthorizedRoles = {
+  create: [USER_ROLE.ADMIN],
+  read: [USER_ROLE.ADMIN],
+  update: [USER_ROLE.ADMIN],
+  delete: [USER_ROLE.ADMIN],
+};
+
+@Controller(`${routePrefix}/<%= lowerHyphenPluralName%>`)
+export class <%= name%>Controller extends createBaseController<<%= name%>ResourceTypeMappings>(
+  Create<%= name%>DTO,
+  Update<%= name%>DTO,
+  FindOneDTO<<%= name%>ResourceTypeMappings['includeT']>,
+  Query<%= name%>DTO,
+  allowedIncludes,
+  allowedWhere,
+  allowedOrderBy,
+  queryOneTransformer,
+  queryManyTransformer,
+  authorizedRoles,
+  <% if(showCompositeKeyOrder) {%>
+  { properties: <%= lowerName%>CompositeKeyOrder, }
+  <% } %>
+) {
+  constructor(protected readonly service: <%= name%>Service) {
+    super();
+  }
+}

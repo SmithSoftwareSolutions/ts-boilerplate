@@ -1,0 +1,32 @@
+import { <%= name%>, Prisma } from '@prisma/client';
+import { Create<%= name%>DTO } from './dto/create-<%= lowerHyphenName%>.dto';
+import { Update<%= name%>DTO } from './dto/update-<%= lowerHyphenName%>.dto';
+import { Query<%= name%>DTO } from './dto/query-<%= lowerHyphenName%>.dto';
+
+import { BaseResourceTypeMappings, MapPossibleIncludesToRequiredDepth } from '@org/nest/common';
+import { XOR } from '@org/ts/common';
+
+export type <%= name%>ResourceTypeMappings = BaseResourceTypeMappings<
+  <%= name%>,
+  <%= name%> &
+    Exclude<
+      Partial<
+        Prisma.<%= name%>GetPayload<{
+          include: MapPossibleIncludesToRequiredDepth<Prisma.<%= name%>Include, 4>;
+        }>
+      >,
+      <%= name%>
+    >,
+  <%= compositePrimaryKeyType%>,
+  XOR<Prisma.<%= name%>CreateInput, Prisma.<%= name%>UncheckedCreateInput>,
+  XOR<Prisma.<%= name%>UpdateInput, Prisma.<%= name%>UncheckedUpdateInput>,
+  Prisma.<%= name%>WhereInput,
+  Prisma.<%= name%>WhereUniqueInput,
+  Prisma.<%= name%>Include,
+  Prisma.<%= name%>OrderByWithRelationInput,
+  Create<%= name%>DTO,
+  Update<%= name%>DTO,
+  Query<%= name%>DTO,
+>;
+
+export const <%= lowerName%>CompositeKeyOrder: (keyof <%= name%>ResourceTypeMappings['resourceT'])[] = <%- compositeKeyOrder%>

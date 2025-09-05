@@ -1,0 +1,29 @@
+{
+  "generators": {
+    "nest-resource-module": {
+      "factory": "./src/generators/nest-resource-module/generator",
+      "schema": "./src/generators/nest-resource-module/schema.json",
+      "description": "nest-resource-module generator"
+    },
+    "angular-resource-service": {
+      "factory": "./src/generators/angular-resource-service/generator",
+      "schema": "./src/generators/angular-resource-service/schema.json",
+      "description": "angular-resource-service generator"
+    },
+    "angular-resource-state": {
+      "factory": "./src/generators/angular-resource-state/generator",
+      "schema": "./src/generators/angular-resource-state/schema.json",
+      "description": "angular-resource-state generator"
+    },
+    "angular-resource-form-modal": {
+      "factory": "./src/generators/angular-resource-form-modal/generator",
+      "schema": "./src/generators/angular-resource-form-modal/schema.json",
+      "description": "angular-resource-form-modal generator"
+    },
+    "angular-resource-list-view": {
+      "factory": "./src/generators/angular-resource-list-view/generator",
+      "schema": "./src/generators/angular-resource-list-view/schema.json",
+      "description": "angular-resource-list-view generator"
+    }
+  }
+}

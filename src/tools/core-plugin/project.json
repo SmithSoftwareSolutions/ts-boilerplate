@@ -1,0 +1,41 @@
+{
+  "name": "core-plugin",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "src/tools/core-plugin/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/src/tools/core-plugin",
+        "main": "src/tools/core-plugin/src/index.ts",
+        "tsConfig": "src/tools/core-plugin/tsconfig.lib.json",
+        "assets": [
+          "src/tools/core-plugin/*.md",
+          {
+            "input": "./src/tools/core-plugin/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./src/tools/core-plugin/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./src/tools/core-plugin",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./src/tools/core-plugin",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}
